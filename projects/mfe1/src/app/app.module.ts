@@ -16,9 +16,11 @@ import { APP_ROUTES } from './app.routes';
     HomeComponent,
     AppComponent,
   ],
+  exports: [FlightsModule],
   providers: [],
   bootstrap: [
-      AppComponent
+    AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+}
