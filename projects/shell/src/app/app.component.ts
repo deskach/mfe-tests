@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthLibService } from 'auth-lib';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shell';
+
+  constructor(private authService: AuthLibService) {
+    this.authService.login('Test', null);
+  }
 }
 
